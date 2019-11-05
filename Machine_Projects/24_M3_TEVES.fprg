@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Rams"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-11-05 09:46:45 AM"/>
+        <attribute name="created" value="UmFtcztERVNLVE9QLTM5NTJVOEI7MjAxOS0xMC0yOTsxMDowNDo0NSBBTTsyNjcx"/>
+        <attribute name="edited" value="UmFtcztERVNLVE9QLTM5NTJVOEI7MjAxOS0xMC0yOTsxMDoyMDoyMiBBTTszOzI3NzQ="/>
+        <attribute name="edited" value="UmFtcztERVNLVE9QLUpFQjlTVDg7MjAxOS0xMS0wNTswOTo0Njo0NSBBTTsxOzI4NTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Num1" type="Real" array="False" size=""/>
+            <output expression="&quot;Welcome to the program that identifies whether the number is Odd or Even&quot;" newline="True"/>
+            <output expression="&quot;Enter a Number&quot;" newline="True"/>
+            <input variable="Num1"/>
+            <if expression="Num1%2 == 0">
+                <then>
+                    <output expression="&quot;Even&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Odd&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
