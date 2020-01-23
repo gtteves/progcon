@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Allan Paul Nefalar"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-01-17 11:30:33 AM"/>
+        <attribute name="created" value="QWxsYW4gUGF1bCBOZWZhbGFyO0xBUFRPUC02VVBSSTJOSTsyMDIwLTAxLTA3OzA2OjI0OjUzIEFNOzM5OTY="/>
+        <attribute name="edited" value="QWxsYW4gUGF1bCBOZWZhbGFyO0xBUFRPUC02VVBSSTJOSTsyMDIwLTAxLTE2OzAxOjE4OjE3IFBNOzY7NDEyMg=="/>
+        <attribute name="edited" value="UmFtcztMQUIzMTRDMTQ7MjAyMC0wMS0xNzsxMToyOTo1NCBBTTsxO1JhbXM7REVTS1RPUC1UNTNGQjE0OzIwMjAtMDEtMDc7MTA6MzY6NTQgQU07Mi4gQmlydGhkYXkuZnByZzs2NTE5"/>
+        <attribute name="edited" value="UmFtcztMQUIzMTRDMTQ7MjAyMC0wMS0xNzsxMTozMDozMyBBTTsxNjsyMzQ1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Num1" type="Real" array="False" size=""/>
+            <declare name="Num2" type="Real" array="False" size=""/>
+            <declare name="Quotient" type="Real" array="False" size=""/>
+            <declare name="Again" type="String" array="False" size=""/>
+            <declare name="ExitCode" type="Boolean" array="False" size=""/>
+            <assign variable="ExitCode" expression="True"/>
+            <output expression="&quot;Welcome to a Program that Identify the Quotient!&quot;" newline="True"/>
+            <output expression="&quot;By: Fabiano, Nefalar and Teves&quot;" newline="True"/>
+            <while expression="ExitCode == True">
+                <output expression="&quot;Input Dividend&quot;" newline="True"/>
+                <input variable="Num1"/>
+                <output expression="&quot;Input Divisor&quot;" newline="True"/>
+                <input variable="Num2"/>
+                <assign variable="Quotient" expression="Num1 / Num2"/>
+                <output expression="&quot;The Quotient is&quot; &amp; Quotient" newline="True"/>
+                <output expression="&quot;Do you want to try again?&quot;" newline="True"/>
+                <input variable="Again"/>
+                <if expression="Again = &quot;Yes&quot;">
+                    <then>
+                        <output expression="&quot;Great! Lets Start Over&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;Thank You! See you Again&quot;" newline="True"/>
+                        <breakpoint/>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

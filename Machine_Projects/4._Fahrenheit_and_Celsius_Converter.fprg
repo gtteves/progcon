@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Allan Paul Nefalar"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-01-17 11:21:45 AM"/>
+        <attribute name="created" value="QWxsYW4gUGF1bCBOZWZhbGFyO0xBUFRPUC02VVBSSTJOSTsyMDIwLTAxLTA3OzA3OjM5OjEzIEFNOzM5OTk="/>
+        <attribute name="edited" value="QWxsYW4gUGF1bCBOZWZhbGFyO0xBUFRPUC02VVBSSTJOSTsyMDIwLTAxLTA3OzA4OjAyOjE4IEFNOzg7dXNlcjtBQ0VSOzIwMTktMTEtMTA7MDY6NTA6MjQgUE07RmFocmVuaGVpdF90b19DZWxzaXVzX1ZpY2VfVmVyc2EuZnByZzs5OTcy"/>
+        <attribute name="edited" value="QWxsYW4gUGF1bCBOZWZhbGFyO0xBUFRPUC02VVBSSTJOSTsyMDIwLTAxLTA3OzA4OjA5OjAxIEFNOzI7NDEwMw=="/>
+        <attribute name="edited" value="UmFtcztMQUIzMTRDMTQ7MjAyMC0wMS0xNzsxMToyMTo0MiBBTTs4O0FsbGFuIFBhdWwgTmVmYWxhcjtMQVBUT1AtNlVQUkkyTkk7MjAxOS0xMS0xMDswNTowMDoyMCBQTTsxLiBPZGQgb3IgRXZlbi5mcHJnOzc5ODc="/>
+        <attribute name="edited" value="UmFtcztMQUIzMTRDMTQ7MjAyMC0wMS0xNzsxMToyMTo0NSBBTTs4OzIzMDE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Welcome to a Program that Convert Celsius and Fahrenheit&quot;" newline="True"/>
+            <output expression="&quot;By: Fabiano, Nefalar and Teves&quot;" newline="True"/>
+            <declare name="Fahrenheit" type="Real" array="False" size=""/>
+            <declare name="Celsius" type="Real" array="False" size=""/>
+            <declare name="Answer" type="String" array="False" size=""/>
+            <declare name="Again" type="String" array="False" size=""/>
+            <declare name="ExitCode" type="Boolean" array="False" size=""/>
+            <assign variable="ExitCode" expression="True"/>
+            <while expression="ExitCode == True">
+                <output expression="&quot;What shall we use Fahrenheit or Celsius?&quot;" newline="True"/>
+                <output expression="&quot;Input 'F' for fahrenheit and 'C' for Celsius&quot;" newline="True"/>
+                <input variable="Answer"/>
+                <if expression="Answer = &quot;C&quot;">
+                    <then>
+                        <output expression="&quot;Input Celsius&quot;" newline="True"/>
+                        <input variable="Celsius"/>
+                        <assign variable="Fahrenheit" expression="(Celsius*9/5)+32"/>
+                        <output expression="&quot;Conversion complete! &quot; &amp;Celsius&amp; &quot; is equivalent to&quot; &amp;Fahrenheit&amp; &quot; Fahrenheit&quot;" newline="True"/>
+                        <output expression="&quot;Do you want to try again?&quot;" newline="True"/>
+                        <input variable="Again"/>
+                        <if expression="Again = &quot;Yes&quot;">
+                            <then>
+                                <output expression="&quot;Great! Lets Start Over&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <output expression="&quot;Thank You! See you again&quot;" newline="True"/>
+                                <breakpoint/>
+                            </else>
+                        </if>
+                    </then>
+                    <else>
+                        <if expression="Answer = &quot;F&quot;">
+                            <then>
+                                <output expression="&quot;Input Fahrenheit&quot;" newline="True"/>
+                                <input variable="Fahrenheit"/>
+                                <assign variable="Celsius" expression="(Fahrenheit-32)*5/9"/>
+                                <output expression="&quot;Conversoin complete! &quot; &amp;Fahrenheit&amp; &quot; is equivalent to &quot; &amp;Celsius&amp; &quot; Celsius&quot;" newline="True"/>
+                                <output expression="&quot;Do you want to try again?&quot;" newline="True"/>
+                                <input variable="Again"/>
+                                <if expression="Again = &quot;Yes&quot;">
+                                    <then>
+                                        <output expression="&quot;Great! Lets Start Over&quot;" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <output expression="&quot;Thank You! See you again&quot;" newline="True"/>
+                                        <breakpoint/>
+                                    </else>
+                                </if>
+                            </then>
+                            <else>
+                                <output expression="&quot;Wrong input of data&quot;" newline="True"/>
+                                <output expression="&quot;Do want to try again?&quot;" newline="True"/>
+                                <input variable="Answer"/>
+                                <if expression="Answer = &quot;Yes&quot;">
+                                    <then>
+                                        <output expression="&quot;Great! Lets Start Over&quot;" newline="True"/>
+                                    </then>
+                                    <else>
+                                        <output expression="&quot;Thank You! See you again&quot;" newline="True"/>
+                                        <breakpoint/>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Rams"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-01-17 11:38:37 AM"/>
+        <attribute name="created" value="UmFtcztMQUIzMTRDMTk7MjAyMC0wMS0wNzsxMDoyNTozNCBBTTsyMTkx"/>
+        <attribute name="edited" value="TmllbDtERVNLVE9QLTZNUUc5MEk7MjAyMC0wMS0wOTsxMToyMTo1MSBQTTszOzI4MTU="/>
+        <attribute name="edited" value="QWxsYW4gUGF1bCBOZWZhbGFyO0xBUFRPUC02VVBSSTJOSTsyMDIwLTAxLTE2OzEyOjM5OjU0IFBNOzM7QWxsYW4gUGF1bCBOZWZhbGFyO0xBUFRPUC02VVBSSTJOSTsyMDIwLTAxLTA3OzA3OjA5OjQwIEFNOzMuIEZlZXQgdG8gSW5jaGVzLmZwcmc7MTAxMjY="/>
+        <attribute name="edited" value="QWxsYW4gUGF1bCBOZWZhbGFyO0xBUFRPUC02VVBSSTJOSTsyMDIwLTAxLTE2OzEyOjQ3OjQ2IFBNOzI7NDEyNA=="/>
+        <attribute name="edited" value="UmFtcztMQUIzMTRDMTQ7MjAyMC0wMS0xNzsxMTozMDo1OCBBTTsxO1JhbXM7REVTS1RPUC1UNTNGQjE0OzIwMjAtMDEtMDc7MTA6MzY6NTQgQU07Mi4gQmlydGhkYXkuZnByZzs2NTE1"/>
+        <attribute name="edited" value="UmFtcztMQUIzMTRDMTQ7MjAyMC0wMS0xNzsxMTozODozNyBBTTsyMTsyMzUz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, Average, FinalAverage, Hold, a" type="Integer" array="False" size=""/>
+            <declare name="Answer" type="String" array="False" size=""/>
+            <declare name="arr" type="Integer" array="True" size="10"/>
+            <assign variable="Average" expression="0"/>
+            <assign variable="Hold" expression="0"/>
+            <assign variable="FinalAverage" expression="0"/>
+            <output expression="&quot;Welcome to a Program that computes the Average and Identify the Largest and Smallest number&quot;" newline="True"/>
+            <output expression="&quot;By: Fabiano, Nefalar and Teves&quot;" newline="True"/>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;Input a Number&quot;" newline="True"/>
+                <input variable="arr[i]"/>
+            </for>
+            <for variable="i" start="0" end="9" direction="inc" step="1">
+                <assign variable="average" expression="average + arr[i]"/>
+            </for>
+            <output expression="&quot;The Average is &quot; &amp; average / 10" newline="True"/>
+            <for variable="a" start="0" end="9" direction="inc" step="1">
+                <for variable="i" start="0" end="8" direction="inc" step="1">
+                    <if expression="arr[i] &lt; arr[i+1]">
+                        <then>
+                            <assign variable="hold" expression="arr[i]"/>
+                            <assign variable="arr[i]" expression="arr[i+1]"/>
+                            <assign variable="arr[i+1]" expression="hold"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <output expression="&quot;The Largest &quot; &amp; arr[0]" newline="True"/>
+            <output expression="&quot;The Smallest &quot; &amp; arr[9]" newline="True"/>
+            <output expression="&quot;Do you want to try again?&quot;" newline="True"/>
+            <input variable="Answer"/>
+            <if expression="Answer = &quot;Yes&quot;">
+                <then>
+                    <output expression="&quot;Great! Lets Start Over&quot;" newline="True"/>
+                    <call expression="Main"/>
+                </then>
+                <else>
+                    <output expression="&quot;Thank You! See you again&quot;" newline="True"/>
+                    <breakpoint/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

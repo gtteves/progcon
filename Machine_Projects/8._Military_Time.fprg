@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Name"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-01-17 11:29:33 AM"/>
+        <attribute name="created" value="TmFtZTtMQVBUT1AtUjI2SDhQRk47MjAyMC0wMS0wNjswMjoyNjozMCBQTTsyNzA0"/>
+        <attribute name="edited" value="TmFtZTtMQVBUT1AtUjI2SDhQRk47MjAyMC0wMS0wNjswMjo0MzoxNiBQTTsxOzI4MTU="/>
+        <attribute name="edited" value="QWxsYW4gUGF1bCBOZWZhbGFyO0xBUFRPUC02VVBSSTJOSTsyMDIwLTAxLTE2OzAxOjAxOjU3IFBNOzM7QWxsYW4gUGF1bCBOZWZhbGFyO0xBUFRPUC02VVBSSTJOSTsyMDIwLTAxLTA3OzA3OjA5OjQwIEFNOzMuIEZlZXQgdG8gSW5jaGVzLmZwcmc7MTAxMTY="/>
+        <attribute name="edited" value="QWxsYW4gUGF1bCBOZWZhbGFyO0xBUFRPUC02VVBSSTJOSTsyMDIwLTAxLTE2OzAxOjE0OjE2IFBNOzM7NDExNA=="/>
+        <attribute name="edited" value="UmFtcztMQUIzMTRDMTQ7MjAyMC0wMS0xNzsxMToyNzozOSBBTTsxO1JhbXM7REVTS1RPUC1UNTNGQjE0OzIwMjAtMDEtMDc7MTA6MzY6NTQgQU07Mi4gQmlydGhkYXkuZnByZzs2NTIw"/>
+        <attribute name="edited" value="UmFtcztMQUIzMTRDMTQ7MjAyMC0wMS0xNzsxMToyOTozMyBBTTszOzIzMDE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Welcome to a Program that will Convert Time to a Military Format&quot;" newline="True"/>
+            <output expression="&quot;By: Fabiano, Nefalar and Teves&quot;" newline="True"/>
+            <declare name="A" type="String" array="False" size=""/>
+            <declare name="Answer" type="String" array="False" size=""/>
+            <declare name="H" type="Integer" array="False" size=""/>
+            <declare name="M" type="Integer" array="False" size=""/>
+            <output expression="&quot;What hour?&quot;" newline="True"/>
+            <input variable="H"/>
+            <output expression="&quot;What minute?&quot;" newline="True"/>
+            <input variable="M"/>
+            <output expression="&quot;AM or PM&quot;" newline="True"/>
+            <input variable="A"/>
+            <if expression="A  = &quot;AM&quot;">
+                <then>
+                    <output expression="H&amp;M" newline="True"/>
+                    <output expression="&quot;Do you want to try again?&quot;" newline="True"/>
+                    <input variable="Answer"/>
+                    <if expression="Answer = &quot;Yes&quot;">
+                        <then>
+                            <output expression="&quot;Great! Lets Start Over&quot;" newline="True"/>
+                            <call expression="Main"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Thank You! See you again&quot;" newline="True"/>
+                            <breakpoint/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <assign variable="H" expression="H + 12"/>
+                    <output expression="H&amp;M" newline="True"/>
+                    <output expression="&quot;Do you want to try again?&quot;" newline="True"/>
+                    <input variable="Answer"/>
+                    <if expression="Answer = &quot;Yes&quot;">
+                        <then>
+                            <output expression="&quot;Great! Lets Start Over&quot;" newline="True"/>
+                            <call expression="Main"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Thank You! See you again&quot;" newline="True"/>
+                            <breakpoint/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

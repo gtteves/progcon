@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Allan Paul Nefalar"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-01-17 11:18:03 AM"/>
+        <attribute name="created" value="QWxsYW4gUGF1bCBOZWZhbGFyO0xBUFRPUC02VVBSSTJOSTsyMDE5LTExLTEwOzA1OjAwOjIwIFBNOzQwMDE="/>
+        <attribute name="edited" value="QWxsYW4gUGF1bCBOZWZhbGFyO0xBUFRPUC02VVBSSTJOSTsyMDIwLTAxLTA3OzA3OjMwOjM2IEFNOzE7QWxsYW4gUGF1bCBOZWZhbGFyO0xBUFRPUC02VVBSSTJOSTsyMDIwLTAxLTA2OzExOjU4OjI4IFBNO0ZvckV4IENvbnZlcnNpb24uZnByZzsxMDI5MQ=="/>
+        <attribute name="edited" value="QWxsYW4gUGF1bCBOZWZhbGFyO0xBUFRPUC02VVBSSTJOSTsyMDIwLTAxLTE2OzEyOjMxOjQ0IFBNOzM7QWxsYW4gUGF1bCBOZWZhbGFyO0xBUFRPUC02VVBSSTJOSTsyMDIwLTAxLTA3OzA3OjA5OjQwIEFNOzMuIEZlZXQgdG8gSW5jaGVzLmZwcmc7MTAxMTc="/>
+        <attribute name="edited" value="QWxsYW4gUGF1bCBOZWZhbGFyO0xBUFRPUC02VVBSSTJOSTsyMDIwLTAxLTE2OzEyOjMyOjIwIFBNOzU7NDExMw=="/>
+        <attribute name="edited" value="UmFtcztMQUIzMTRDMTQ7MjAyMC0wMS0xNzsxMToxODowMyBBTTsyOzIyOTU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Identify the number if it is Odd or Even&quot;" newline="True"/>
+            <output expression="&quot;By: Fabiano, Nefalar and Teves&quot;" newline="True"/>
+            <declare name="Number" type="Integer" array="False" size=""/>
+            <declare name="OddorEven" type="Integer" array="False" size=""/>
+            <declare name="Again" type="String" array="False" size=""/>
+            <declare name="ExitCode" type="Boolean" array="False" size=""/>
+            <assign variable="ExitCode" expression="True"/>
+            <while expression="ExitCode = True">
+                <output expression="&quot;Input a number&quot;" newline="True"/>
+                <input variable="Number"/>
+                <assign variable="OddorEven" expression="Number % 2"/>
+                <if expression="OddorEven = 0">
+                    <then>
+                        <output expression="&quot;The number is Even&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;The Number is Odd&quot;" newline="True"/>
+                    </else>
+                </if>
+                <output expression="&quot;Do you want to try again?&quot;" newline="True"/>
+                <input variable="Again"/>
+                <if expression="Again = &quot;Yes&quot;">
+                    <then>
+                        <output expression="&quot;Great! Lets Start Over&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;Thank You! See you again&quot;" newline="True"/>
+                        <breakpoint/>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
